@@ -9,11 +9,13 @@ import { NodeArticlesService } from './node-articles/node-articles.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatPaginatorModule, MatTableModule, MatDialogModule, MatProgressSpinnerModule, MatProgressBarModule, MatIconModule, MatButtonModule } from '@angular/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { CreatedAtPipe } from './created-at.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NodeArticlesComponent
+    NodeArticlesComponent,
+    CreatedAtPipe
   ],
   imports: [
     BrowserModule,

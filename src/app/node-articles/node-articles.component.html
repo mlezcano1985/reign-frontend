@@ -15,7 +15,7 @@
             <ng-container matColumnDef="date">
                 <th mat-header-cell *matHeaderCellDef></th>
                 <td mat-cell *matCellDef="let row">
-                    <span class="title-date">{{ row.created_at }}</span>
+                    <span class="title-date">{{ row.created_at | createdAt }}</span>
                 </td>
             </ng-container>
             <ng-container matColumnDef="actions">
