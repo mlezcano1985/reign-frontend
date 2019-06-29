@@ -1,7 +1,12 @@
 ::ng-deep {
+
     table tbody tr:hover {
         cursor: pointer;
         background-color: #fafafa;
+    }
+
+    table tbody tr:hover .delete{
+       display: block!important;
     }
 
     table thead {
@@ -17,4 +22,19 @@
         color: #333;
         font-size: 13pt;
     }
+
+    .header{
+        height: 40vh;
+        background: #333;
+        color: #fff;
+    }
+
+    .p-40{
+        padding: 0 40px;
+    }
+
+    .delete{
+        display: none !important;
+    }
+
 }
