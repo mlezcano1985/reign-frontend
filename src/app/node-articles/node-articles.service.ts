@@ -5,6 +5,7 @@ import { NodeArticlesModel } from './model/node-articles.model';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { NodeArticlesListModel } from './model/node-articles-list.model';
+import { map } from 'rxjs/operators';
 
 @Injectable({providedIn: 'root'})
 export class NodeArticlesService implements IRepository<NodeArticlesModel> {
@@ -13,7 +14,10 @@ export class NodeArticlesService implements IRepository<NodeArticlesModel> {
 
     getAll(): Observable<NodeArticlesListModel> {
         const url = this.baseUrl;
-        return this.httpClient.get<NodeArticlesListModel>(url);
+        return this.httpClient.get<NodeArticlesListModel>(url)
+            .pipe(
+                map(res => this.processorGetAll(res))
+            );
     }
     get(id: string | number): Observable<NodeArticlesModel> {
         throw new Error('Method not implemented.');
@@ -24,5 +28,19 @@ export class NodeArticlesService implements IRepository<NodeArticlesModel> {
     delete(id: string | number): Observable<any> {
         const url = `${this.baseUrl}/${id}`;
         return this.httpClient.delete(url);
+    }
+
+    private processorGetAll(response: NodeArticlesListModel): NodeArticlesListModel {
+        console.log('entro');
+        const result = new NodeArticlesListModel();
+        response.items.forEach(item => {
+            if (item.title || item.story_title) {
+                item.story_title = item.story_title || item.title;
+                result.items.push(item);
+            }
+        });
+
+        result.total = result.items.length;
+        return result;
     }
 }

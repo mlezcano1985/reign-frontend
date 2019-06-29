@@ -29,7 +29,8 @@ export class NodeArticlesComponent implements OnInit {
   }
 
   rowClick(el: NodeArticlesModel): void {
-    alert('rowClick');
+    const url = el.story_url || el.url;
+    window.open(url, '_blank');
   }
 
   private getAll(): void {
