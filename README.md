@@ -8,7 +8,6 @@ Simple aplicación desarrollada con Angular 8. Cuenta con 2 funcionalidades:
 # Cómo empezar?
 - Clonar o descargar el repositorio.
 - Abrir un terminal en la raíz del proyecto.
-- Instalar dependencias usando el comando `npm install`.
 
 # Ejecutar con Docker
 - Instalar [Docker](https://docs.docker.com/compose/install/) en dependencia de su sistema operativo.
@@ -19,6 +18,7 @@ Simple aplicación desarrollada con Angular 8. Cuenta con 2 funcionalidades:
 # Ejecutar sin Docker
 - Instalar versión estable de [NodeJS](https://nodejs.org/es/download/).
 - Instalar [Angular CLI](https://cli.angular.io/).
+- Instalar dependencias usando el comando `npm install`.
 - Ejecutar el comando `npm start` para que la se inicie la aplicación web.
 - Abrir en el navegador la url: [http://localhost:4200](http://localhost:4200)
 
