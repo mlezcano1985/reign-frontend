@@ -1,27 +1,27 @@
-# ReignFrontend
+# Demo Aplicación SPA con Angular 8 y Angular Material
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+# Descripción
+Simple aplicación desarrollada con Angular 8. Cuenta con 2 funcionalidades:
+- GET: `articles/node`: Muestra información asociada a artículos relacionados con NodeJS.
+- DELETE: `articles/node/:id`: Elimina un artículo dado su id.
 
-## Development server
+# Cómo empezar?
+- Clonar o descargar el repositorio.
+- Abrir un terminal en la raíz del proyecto.
+- Instalar dependencias usando el comando `npm install`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Ejecutar con Docker
+- Instalar [Docker](https://docs.docker.com/compose/install/) en dependencia de su sistema operativo.
+- Abrir un terminal en la raíz del proyecto.
+- Ejecutar el comando `npm run start-docker` para que la se inicien la aplicación web.
+- Abrir en el navegador la url: [http://localhost:4200](http://localhost:4200)
 
-## Code scaffolding
+# Ejecutar sin Docker
+- Instalar versión estable de [NodeJS](https://nodejs.org/es/download/).
+- Instalar [Angular CLI](https://cli.angular.io/).
+- Ejecutar el comando `npm start` para que la se inicie la aplicación web.
+- Abrir en el navegador la url: [http://localhost:4200](http://localhost:4200)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+# Comandos disponibles
+- `npm start`: Inicia la app en modo desarrollo.
+- `npm run start-docker`: Inicia la app en el contenedor de docker.
