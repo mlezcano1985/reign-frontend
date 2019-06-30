@@ -1,6 +1,7 @@
 import { Model } from '../../core/model/model';
 
 export class NodeArticlesModel extends Model {
+    _id: string;
     author: string;
     title: string;
     story_title: string;

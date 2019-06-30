@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'HN-Feed';
+  constructor() {
+    document.title = this.title;
+  }
 }

@@ -25,7 +25,9 @@ export class NodeArticlesComponent implements OnInit {
   }
 
   delete(el: NodeArticlesModel): void {
-    alert('delete');
+    this.loading = true;
+    this.nodeArtService.delete(el._id)
+      .subscribe(() => this.getAll());
   }
 
   rowClick(el: NodeArticlesModel): void {
