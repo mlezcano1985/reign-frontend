@@ -5,6 +5,8 @@ Simple aplicación desarrollada con Angular 8. Cuenta con 2 funcionalidades:
 - GET: `articles/node`: Muestra información asociada a artículos relacionados con NodeJS.
 - DELETE: `articles/node/:id`: Elimina un artículo dado su id.
 
+Los servicios de estas funcionalidades están definidos en la [app backend](https://github.com/mlezcano1985/reign-backend) de este demo.
+
 # Cómo empezar?
 - Clonar o descargar el repositorio.
 - Abrir un terminal en la raíz del proyecto.
